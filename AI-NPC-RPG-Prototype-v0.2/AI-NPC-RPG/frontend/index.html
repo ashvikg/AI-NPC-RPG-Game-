@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Brindlewood — AI NPC RPG</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+<header><a class="brand" href="#"><span class="brand-mark">✦</span> BRINDLEWOOD <small>THE AWAKENING</small></a><div class="header-right"><span class="status-dot"></span><span id="connection">CONNECTING</span><button id="reset" class="reset">NEW SESSION ↻</button></div></header>
+<main>
+  <section class="intro"><p class="eyebrow">CHAPTER I · THE QUIET BEFORE</p><h1>A village with<br><em>secrets to tell.</em></h1><p class="intro-copy">Explore Brindlewood. Meet its people. Every conversation might reveal a clue.</p></section>
+  <section class="game-layout">
+    <div class="world-panel">
+      <div class="world-top"><span>BRINDLEWOOD VILLAGE</span><span>DAY 01 · 08:42 AM</span></div>
+      <div class="world" id="world">
+        <div class="sun"></div><div class="mountain m1"></div><div class="mountain m2"></div>
+        <div class="path"></div><div class="pond"></div>
+        <div class="tree t1">♣</div><div class="tree t2">♣</div><div class="tree t3">♣</div><div class="tree t4">♣</div>
+        <div class="house h1"><span>ELDER'S HALL</span></div><div class="house h2"><span>THE INN</span></div>
+        <button class="npc mira selected" data-npc="elder_mira" style="--x:35%;--y:49%"><span class="sprite">♟</span><b>MIRA</b></button>
+        <button class="npc kael" data-npc="kael" style="--x:66%;--y:67%"><span class="sprite">♟</span><b>KAEL</b></button>
+        <button class="npc sera" data-npc="innkeeper_sera" style="--x:79%;--y:43%"><span class="sprite">♟</span><b>SERA</b></button>
+        <div class="quest-shrine" id="quest-shrine" aria-label="Ancient shrine"><span>✧</span><b>ANCIENT SIGIL</b></div>
+        <div class="player" id="player" style="left:49%;top:78%"><span>♟</span><small>YOU</small></div>
+        <div class="interaction-prompt" id="interaction-prompt">WASD TO MOVE · E TO INTERACT</div>
+        <div class="map-hint" id="map-hint">FIND ELDER MIRA TO BEGIN YOUR QUEST</div>
+      </div>
+      <div class="world-footer"><span>✦ Explore the village</span><span>WASD · MOVE <i>COMING SOON</i></span></div>
+    </div>
+    <aside class="dialogue-panel">
+      <div class="quest-card" id="quest-card">
+        <div class="quest-card-top"><span>✦ ACTIVE QUEST</span><b id="quest-status">NOT STARTED</b></div>
+        <strong id="quest-title">The Sleeping Beacon</strong>
+        <p id="quest-objective">Speak with Elder Mira to learn what troubles Brindlewood.</p>
+        <div class="quest-progress"><span id="quest-progress"></span></div>
+      </div>
+      <div class="dialogue-head"><div><p class="eyebrow">CONVERSATION</p><h2 id="npc-name">Elder Mira</h2><span id="npc-role">Village elder</span></div><div class="portrait" id="portrait">M</div></div>
+      <div class="messages" id="messages"><div class="message npc-message"><span class="speaker">ELDER MIRA</span><p>Ah, a traveler. Brindlewood has not seen many new faces lately. The northern forest has grown restless... perhaps you can help us.</p></div></div>
+      <div class="suggestions"><button>Tell me about the village.</button><button>Do you have a quest?</button><button>What is happening in the forest?</button></div>
+      <form id="chat-form"><input id="message" maxlength="1200" placeholder="Say something..." autocomplete="off"><button aria-label="Send">➤</button></form>
+      <div class="ai-note"><span>✧</span> NPC DIALOGUE <b id="mode">LOCAL MODE</b></div>
+    </aside>
+  </section>
+  <footer><span>AI NPC RPG <b>·</b> PROTOTYPE 0.2</span><span>WASD / ARROWS MOVE <b>·</b> E INTERACT · CLICK NPC TO TALK</span></footer>
+</main><script src="app.js"></script>
+</body></html>
