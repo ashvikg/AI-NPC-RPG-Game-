@@ -1,4 +1,5 @@
 Brindlewood: The Awakening --- AI NPC RPG
+
 A small browser-playable RPG prototype featuring a top-down village, NPC
 conversations, keyboard movement, and a simple quest.
 Features
